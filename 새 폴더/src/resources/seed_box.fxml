@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="tree.controller.SeedController" spacing="10" alignment="CENTER" styleClass="seed-box">
+    <Label text="🌱 새싹 성장기" />
+    <ImageView fx:id="plantImage" fitWidth="150" preserveRatio="true" pickOnBounds="true" />
+    <HBox spacing="10" alignment="CENTER">
+        <CheckBox fx:id="feedCheckBox" disable="true" />
+        <Label text="일정 3개 완료 시 새싹 성장!" />
+    </HBox>
+</VBox>

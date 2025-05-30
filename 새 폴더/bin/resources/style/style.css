@@ -1,0 +1,14 @@
+.top-bar {
+    -fx-padding: 10;
+    -fx-background-color: #f2f2f2;
+}
+
+.seed-box {
+    -fx-padding: 20;
+    -fx-background-color: #e7f7e2;
+}
+
+.task-box {
+    -fx-padding: 20;
+    -fx-background-color: #fdfdfd;
+}

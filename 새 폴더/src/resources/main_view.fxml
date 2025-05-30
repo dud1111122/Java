@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="804.0" tabClosingPolicy="UNAVAILABLE" tabMinWidth="80.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tree.controller.MainController">
+  <tabs>
+    <Tab text="Calender">
+      <content>
+        <AnchorPane>
+          <children>
+            <BorderPane prefHeight="594.0" prefWidth="804.0">
+              <top>
+                <HBox spacing="10">
+                  <padding>
+                    <Insets bottom="10" left="10" right="10" top="10" />
+                  </padding>
+                  <children>
+                    <TextField promptText="검색어 입력" />
+                    <TextField promptText="날짜 선택" />
+                    <TextField promptText="기타 메모" />
+                  </children>
+                </HBox>
+              </top>
+              <left>
+                <VBox alignment="TOP_CENTER" spacing="10" BorderPane.alignment="CENTER">
+                  <padding>
+                    <Insets bottom="10" left="10" right="10" top="10" />
+                  </padding>
+                  <children>
+                    <Label text="📅 오늘의 일정" />
+                    <VBox fx:id="taskContainer" prefHeight="300" prefWidth="297.0" spacing="5" style="-fx-border-color: lightgray; -fx-padding: 10;" />
+                    <HBox spacing="5">
+                      <children>
+                        <TextField fx:id="taskInput" promptText="새 일정 입력" />
+                        <Button  text="추가" />
+                      </children>
+                    </HBox>
+                    <Button  text="💾 저장하기" />
+                    <Button  text="📂 불러오기" />
+                  </children>
+                </VBox>
+              </left>
+            </BorderPane>
+          </children>
+        </AnchorPane>
+      </content>
+    </Tab>
+
+    <Tab text="Feed_Tree">
+  <content>
+    <AnchorPane>
+      <children>
+        <!-- ✅ 테마 버튼 -->
+        <Button text="Light Theme" layoutX="20.0" layoutY="20.0" onAction="#switchToLightTheme"/>
+        <Button text="Dark Theme" layoutX="120.0" layoutY="20.0" onAction="#switchToDarkTheme"/>
+
+        <!-- ✅ 기존 BorderPane 구조 -->
+        <BorderPane layoutY="60.0" prefHeight="594.0" prefWidth="804.0">
+          <right>
+            <VBox alignment="TOP_LEFT" prefHeight="594.0" prefWidth="238.0" spacing="10" BorderPane.alignment="CENTER">
+              <children>
+                <Label text="📋 일정 피드" />
+                <HBox alignment="CENTER_LEFT" spacing="5">
+                  <children>
+                    <CheckBox fx:id="feedCheckBox" disable="true" />
+                    <Label text="일정 3개 완료 시 새싹 성장!" />
+                  </children>
+                </HBox>
+              </children>
+            </VBox>
+          </right>
+          <left>
+            <VBox alignment="CENTER" prefHeight="594.0" prefWidth="567.0" spacing="10" BorderPane.alignment="CENTER">
+              <children>
+                <Label text="🌱 새싹 성장기" />
+                <ImageView fx:id="plantImage" fitWidth="150" preserveRatio="true" />
+              </children>
+            </VBox>
+          </left>
+        </BorderPane>
+      
+        <Button text="🌱 새싹" layoutX="20.0" layoutY="60.0" onAction="#showStage0"/>
+        <Button text="🌳 아기나무" layoutX="100.0" layoutY="60.0" onAction="#showStage1"/>
+        <Button text="🌲 성체나무" layoutX="200.0" layoutY="60.0" onAction="#showStage2"/>
+        <Button text="🌌 세계수" layoutX="300.0" layoutY="60.0" onAction="#showStage3"/>
+    </children>
+    </AnchorPane>
+  </content>
+</Tab>
+
+  </tabs>
+</TabPane>

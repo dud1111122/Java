@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="tree.controller.TaskController" spacing="10" alignment="TOP_CENTER" styleClass="task-box">
+    <Label text="📅 오늘의 일정" />
+    <VBox fx:id="taskContainer" spacing="5" prefHeight="300" prefWidth="250" style="-fx-border-color: lightgray; -fx-padding: 10;" />
+    <HBox spacing="5">
+        <TextField fx:id="taskInput" promptText="새 일정 입력" HBox.hgrow="ALWAYS"/>
+        <Button text="추가" onAction="#handleAddTask"/>
+    </HBox>
+    <Button text="💾 저장하기" onAction="#handleSaveTasks"/>
+    <Button text="📂 불러오기" onAction="#handleLoadTasks"/>
+</VBox>
